@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="26dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/text_Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/GreenTIC12"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_restaurantIcon"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/image_restaurantIcon"
+            app:layout_constraintEnd_toStartOf="@+id/text_Header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cardapio_do_restaurante"
+            app:tint="@color/BlueTIC12" />
+
+        <TextView
+            android:id="@+id/text_WelcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_WelcomeTitle"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_restaurantIcon"
+            app:layout_constraintStart_toStartOf="@+id/text_Header"
+            app:layout_constraintTop_toBottomOf="@+id/text_Header" />
+
+        <TextView
+            android:id="@+id/text_TableNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_TableNumber"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_restaurantIcon" />
+
+        <EditText
+            android:id="@+id/edit_TableNumber"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:hint="@string/edit_TableNumber"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/text_TableNumber"
+            app:layout_constraintTop_toBottomOf="@+id/text_TableNumber" />
+
+        <TextView
+            android:id="@+id/text_tableStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/text_tableStatus"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/edit_TableNumber"
+            app:layout_constraintTop_toTopOf="@+id/edit_TableNumber" />
+
+        <Button
+            android:id="@+id/button_ToCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_ToCheck"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/BlueTIC12"
+            app:layout_constraintTop_toBottomOf="@id/text_tableStatus"
+            app:layout_constraintStart_toStartOf="@id/text_tableStatus"/>
+
+        <TextView
+            android:id="@+id/text_StarterDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_StarterDishes"
+            android:textColor="@color/BlueTIC12"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_TableNumber" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_StarterDishes" />
+
+        <HorizontalScrollView
+
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:layout_editor_absoluteX="26dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_StarterDishes01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_StarterDishes01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishesPrice01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_StarterDishesPrice01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishes01"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishes01" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_StarterDishes01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishesPrice01"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishesPrice01" />
+
+
+                <TextView
+                    android:id="@+id/text_StarterDishes02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_StarterDishes02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_StarterDishes01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishesPrice02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_StarterDishesPrice02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishes02"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishes02" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_StarterDishes02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishesPrice02"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishesPrice02"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishes03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_StarterDishes03"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_StarterDishes02"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishesPrice03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_StarterDishesPrice03"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishes03"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishes03" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_StarterDishes03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishesPrice03"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishesPrice03" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishes04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_StarterDishes04"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_StarterDishes03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_StarterDishesPrice04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_StarterDishesPrice04"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishes04"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishes04" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_StarterDishes04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_StarterDishesPrice04"
+                    app:layout_constraintTop_toBottomOf="@id/text_StarterDishesPrice04" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_MainDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_MainDishes"
+            android:textColor="@color/BlueTIC12"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/scrollView"
+            app:layout_constraintTop_toBottomOf="@id/scrollView" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_MainDishes" />
+
+        <HorizontalScrollView
+
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            tools:layout_editor_absoluteX="26dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_MainDishes01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_MainDishes01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_MainDishesPrice01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_MainDishesPrice01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_MainDishes01"
+                    app:layout_constraintTop_toBottomOf="@id/text_MainDishes01" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_MainDishes01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_MainDishesPrice01"
+                    app:layout_constraintTop_toBottomOf="@id/text_MainDishesPrice01" />
+
+
+                <TextView
+                    android:id="@+id/text_MainDishes02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_MainDishes02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_MainDishes01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_MainDishesPrice02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_MainDishesPrice02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_MainDishes02"
+                    app:layout_constraintTop_toBottomOf="@id/text_MainDishes02" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_MainDishes02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_MainDishesPrice02"
+                    app:layout_constraintTop_toBottomOf="@id/text_MainDishesPrice02" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_Drinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_Drinks"
+            android:textColor="@color/BlueTIC12"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/scrollView2"
+            app:layout_constraintTop_toBottomOf="@id/scrollView2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_Drinks" />
+
+        <HorizontalScrollView
+
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="@id/view3"
+            app:layout_constraintTop_toBottomOf="@id/view3"
+            tools:layout_editor_absoluteX="26dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_Drinks01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_Drinks01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_DrinksPrice01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_DrinksPrice01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_Drinks01"
+                    app:layout_constraintTop_toBottomOf="@id/text_Drinks01" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_Drinks01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_DrinksPrice01"
+                    app:layout_constraintTop_toBottomOf="@id/text_DrinksPrice01" />
+
+
+                <TextView
+                    android:id="@+id/text_Drinks02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_Drinks02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_Drinks01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_DrinksPrice02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_DrinksPrice02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_Drinks02"
+                    app:layout_constraintTop_toBottomOf="@id/text_Drinks02" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_drinks02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_DrinksPrice02"
+                    app:layout_constraintTop_toBottomOf="@id/text_DrinksPrice02" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/text_Desserts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_Desserts"
+            android:textColor="@color/BlueTIC12"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/scrollView3"
+            app:layout_constraintTop_toBottomOf="@id/scrollView3" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_Desserts" />
+
+        <HorizontalScrollView
+
+            android:id="@+id/scrollView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintTop_toBottomOf="@id/view4"
+            tools:layout_editor_absoluteX="26dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_Desserts01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_Desserts01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_DessertsPrice01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_DessertsPrice01"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_Desserts01"
+                    app:layout_constraintTop_toBottomOf="@id/text_Desserts01" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_Desserts01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_DessertsPrice01"
+                    app:layout_constraintTop_toBottomOf="@id/text_DessertsPrice01" />
+
+
+                <TextView
+                    android:id="@+id/text_Desserts02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/text_Desserts02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@id/text_Desserts01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_DessertsPrice02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_DessertsPrice02"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@id/text_Desserts02"
+                    app:layout_constraintTop_toBottomOf="@id/text_Desserts02" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_Desserts02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/text_DessertsPrice02"
+                    app:layout_constraintTop_toBottomOf="@id/text_DessertsPrice02" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_Result"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/BlueTIC12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrollView4" />
+
+        <Button
+            android:id="@+id/button_Calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/GreenTIC12"
+            android:text="@string/button_Calculate"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintEnd_toStartOf="@id/button_MakeaWish"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_Result" />
+
+        <Button
+            android:id="@+id/button_MakeaWish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/GreenTIC12"
+            android:text="@string/button_MakeaWish"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_Calculate"
+            app:layout_constraintTop_toTopOf="@id/button_Calculate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

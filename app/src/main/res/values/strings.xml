@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">APP CARDÁPIO ONLINE</string>
+    <string name="text_WelcomeTitle">Bem vindo ao app cardápio online</string>
+    <string name="text_TableNumber">Número da mesa</string>
+    <string name="edit_TableNumber">Digite o número aqui</string>
+    <string name="text_tableStatus">Status da mesa:</string>
+    <string name="text_StarterDishes">Pratos de entradas</string>
+    <string name="text_StarterDishes01">Dadinho de tapioca</string>
+    <string name="text_StarterDishesPrice01">R$10,10</string>
+    <string name="text_StarterDishes02">Queijo com frutas</string>
+    <string name="text_StarterDishesPrice02">R$ 15,00</string>
+    <string name="text_StarterDishes03">Ceviche de atum</string>
+    <string name="text_StarterDishesPrice03">R$ 20,00</string>
+    <string name="text_StarterDishes04">Batata Frita</string>
+    <string name="text_StarterDishesPrice04">R$ 25,00</string>
+    <string name="image_restaurantIcon">icone</string>
+    <string name="text_MainDishes">Pratos principais</string>
+    <string name="text_MainDishes01">Executivo Com Bife</string>
+    <string name="text_MainDishesPrice01">R$ 24,00</string>
+    <string name="text_MainDishes02">"Executivo com Picanha"</string>
+    <string name="text_MainDishesPrice02">R$ 15,00</string>
+    <string name="text_Drinks">Bebidas</string>
+    <string name="text_Drinks01">Suco de Laranja</string>
+    <string name="text_DrinksPrice01">RS 10,60</string>
+    <string name="text_Drinks02">suco de Limao</string>
+    <string name="text_DrinksPrice02">R$ 5,00</string>
+    <string name="text_Desserts">Sobremesas</string>
+    <string name="text_Result">R$ 0,00</string>
+    <string name="button_Calculate">Calcular</string>
+    <string name="button_MakeaWish">Fazer pedido</string>
+    <string name="text_Desserts01">Mousse de Maracujá</string>
+    <string name="text_DessertsPrice01">R$ 15,90</string>
+    <string name="text_Desserts02">torta trufada</string>
+    <string name="text_DessertsPrice02">18,50</string>
+    <string name="button_ToCheck">Verificar</string>
+</resources>
